@@ -1,0 +1,132 @@
+{
+    "courses": [
+      {
+        "name": "Programming Concepts",
+        "course number": "151",
+        "category": "Computer Science",
+        "description": "Problem solving techniques such as pseudo-code of flowcharts, algorithmic thinking. Basic prigramming concepts including: variables, arithmetic and logical operations, input/ output, conditional statements, loops, arrays, functions, and file processing. The laboratory provides a practical programming experience."
+      },
+      {
+        "name": "General Chemistry I",
+        "course number": "101",
+        "category": "Chemistry",
+        "description": "Topics covered include measurements, significant figures, atomic structure, nomenclature, stoichiometry and chemical calculations, chemical reactions, thermochemistry and enthalpy changes, quantum theory of the atom and electron configuration, chemical bonding and molecular geometry. The above topics are presented using experiential learning strategy in which the students will gain a strong foundation in chemical principles and their applications in different fields."
+      },
+      {
+        "name": "Calculus I",
+        "course number": "101",
+        "category": "Mathematics",
+        "description": "Limits and continuity. Differentiation. Applications of derivatives. Integration. Inverse functions. Transcendental functions."
+      } ,
+      {
+        "name": "Software Engineering",
+        "course number": "310",
+        "category": "Computer Science",
+        "description": "Fundamental concepts, principles and techniques for cost-effective engineering of quality software. Software process models, requirements specification, domain analysis, software design and modeling of structural and behavioral aspects of a software system using a common modeling language, implementation, testing and software project management. The laboratory provides practical experience with software engineering and supporting tools."
+      },
+      {
+        "name": "General Physics For Engineering I",
+        "course number": "191",
+        "category": "Physics",
+        "description": "This course covers fundamental concepts in physics, including motion (linear, projectile, circular, rotational), laws of motion (Newton's laws), work, energy, linear momentum, collisions, angular momentum, elasticity, gravitation, waves, temperature, and heat. It explores various principles like conservation of energy, momentum, and angular momentum, as well as thermodynamic laws and their applications in real-world phenomena."
+      },
+      {
+        "name": "Calculus II",
+        "course number": "102",
+        "category": "Mathematics",
+        "description": "Techniques of integration. Applications of integration. Infinite series. Parametric equations and polar coordinates."
+      },
+      {
+        "name": "General Chemistry II",
+        "course number": "102",
+        "category": "Chemistry",
+        "description": "Topics covered include chemical kinetics, chemical equilibrium, acid-base equilibria, solubility product, thermodynamics, electrochemistry, and oxidation-reduction reactions. The above topics are presented using experiential learning strategy in which the students will gain a strong foundation in chemical principles and their applications in different fields."
+      },
+      {
+        "name": "Linear Algebra",
+        "course number": "201",
+        "category": "Mathematics",
+        "description": "Systems of linear equations. Matrices. Determinants. Vector spaces. Linear transformations. Eigenvalues and eigenvectors."
+      },
+      {
+        "name": "General Physics For Engineering II",
+        "course number": "193",
+        "category": "Physics",
+        "description": "This course covers fundamental concepts in physics, including thermodynamics, kinetic theory, heat transfer, fluids, oscillations, waves, sound, and optics. It explores various principles like conservation of energy and momentum, thermodynamic laws, and their applications in real-world phenomena."
+      },
+      {
+        "name": "Experimental General Physics For Engineering I",
+        "course number": "192",
+        "category": "Physics",
+        "description": "This is the Lab-based course covering the subject matter of PHYS 191.The course presents an introduction to the methods of experimental physics Emphasis is on developing student’s skills in experimental techniques, data analysis, and scientific reporting of lab work. During the course students execute a series of experiments on Kinematics of motion, kinetic and potential energy, Oscillatory motion, Thermal properties of matter, and Viscosity. The course includes computer based experiments Classical Mechanics."
+      },
+      {
+        "name": "Experimental General Physics For Engineering II",
+        "course number": "194",
+        "category": "Physics",
+        "description": "This is the Lab-based course covering the subject matter of PHYS 193. The course presents an introduction to the methods of experimental physics Emphasis is on developing student’s skills in experimental techniques, data analysis, and scientific reporting of lab work. During the course students execute a series of experiments on Thermodynamics, Kinetic theory, Waves and Sound, Optics, and Electricity and Magnetism. The course includes computer based experiments Classical Mechanics."
+      },
+      {
+        "name": "Discrete Structures",
+        "course number": "205",
+        "category": "Computer Science",
+        "description": "Introduction to the elements of mathematics applicable to the computing field. Logic and methods of proof; logic gates; Boolean algebra and minimization; set theory; relations and functions; sequences and sums; induction; numbering systems and combinatorics."
+      },
+      {
+        "name": "Computer Architecture and Organization",
+        "course number": "263",
+        "category": "Computer Engineering",
+        "description": "Higher-level concepts in computer architecture. Data representation; classic components of a computer; performance measures for computers; CPU types, design, organization, instruction-level description; processor programming, addressing modes, assembly language; main and cache memory, caching techniques, basics of parallel architectures."
+      },
+      {
+        "name": "Data Structures",
+        "course number": "303",
+        "category": "Computer Science",
+        "description": ""
+      },
+      {
+        "name": "Digital Logic Design",
+        "course number": "213",
+        "category": "Computer Engineering",
+        "description": "Fundamental data structures and algorithms and their efficient implementation and application to problem solving. Linked lists, stacks, queues, hash tables, trees and graphs. Develop and analyze iterative and recursive algorithms such as searching and storing algorithms. The laboratory provides practical experience with data structures and algorithms."
+      },
+      {
+        "name": "Web development Fundamentals",
+        "course number": "350",
+        "category": "Computer Science",
+        "description": "Concepts, protocols and enabling technologies related to the development of modern web applications. Fundamentals of designing and developing dynamic and interactive web applications using HTML and related standards, scripting languages, client-side and server-side programming. Hands-on Lab to design and develop Web applications."
+      },
+      {
+        "name": "Design and Analysis of Algorithms",
+        "course number": "323",
+        "category": "Computer Science",
+        "description": "Analysis, design, and efficiency of algorithms illustrated by a comprehensive exposure to fundamental algorithms and various adopted techniques to solve different types of problems. Analysis of sorting, searching, and other algorithms; designing algorithms using techniques for problem-solving such as greedy methods, divide-and-conquer, backtracking, dynamic programming, and branch-and-bound techniques; complexity of algorithms."
+      },
+      {
+        "name": "Arabic Language I",
+        "course number": "100",
+        "category": "Arabic Language",
+        "description": "The course aims to provide students the important skills to communicate in Arabic; listening, speaking and reading, with attention to writing skills in relation to each."
+      },
+      {
+        "name": "Arabic Language II",
+        "course number": "200",
+        "category": "Arabic Language",
+        "description": "This course focuses on developing students' Arabic writing skills, emphasizing both scientific and professional communication. It covers functional, creative, traditional, and contemporary writing styles, along with descriptive and analytical approaches. The course promotes self-learning, collaboration, critical thinking, and dialogue, fostering cultural awareness and good citizenship. Students are evaluated based on their writing skills to achieve the desired learning outcomes."
+      },
+      {
+        "name": " English Language I Post Foundation",
+        "course number": "202",
+        "category": "English Language & Literature",
+        "description": "English Language I Post Foundation is based on learner-centric academic writing, with an emphasis on process-based writing of academic essays and paraphrasing. Focus is also placed on the development of critical and reflective thinking skills via an autonomous Blackboard online learning program comprised of Critical Reading & Writing and a Reflective Learning Journal."
+      },
+      {
+        "name": "English Language II Post Foundation",
+        "course number": "203",
+        "category": "English Language & Literature",
+        "description": "English Language II Post Foundation is based on learner-centric academic writing, with an emphasis on process-based writing of academic essays and paraphrasing. Focus is also placed on the development of critical and reflective thinking skills via an autonomous Blackboard online learning program comprised of Critical Reading & Writing and a Reflective Learning Journal."
+      }
+      
+    ]
+      
+}
