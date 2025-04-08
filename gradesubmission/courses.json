@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Programming Concepts",
+        "courseNumber": "151",
+        "category": "Computer Science",
+        "students": [
+            { "name": "John Doe", "id": "S12345", "grade": "" },
+            { "name": "Jane Smith", "id": "S12346", "grade": "" }
+        ]
+    },
+    {
+        "name": "General Chemistry I",
+        "courseNumber": "101",
+        "category": "Chemistry",
+        "students": [
+            { "name": "Mary Johnson", "id": "S22345", "grade": "" },
+            { "name": "James White", "id": "S22346", "grade": "" }
+        ]
+    }
+]
