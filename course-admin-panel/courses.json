@@ -1,0 +1,147 @@
+{
+  "courses": [
+    {
+      "name": "Programming Concepts",
+      "course number": "151",
+      "category": "Computer Science",
+      "description": "Problem solving techniques such as pseudo-code of flowcharts, algorithmic thinking. Basic programming concepts including: variables, arithmetic and logical operations, input/output, conditional statements, loops, arrays, functions, and file processing. The laboratory provides a practical programming experience.",
+      "status": "open for registration", 
+      "classes": [
+        {
+          "class_id": "151-A",
+          "instructor": "Dr. Smith",
+          "status": "pending", 
+          "registrations": 20,
+          "min_registrations": 15
+        },
+        {
+          "class_id": "151-B",
+          "instructor": "Dr. Johnson",
+          "status": "pending", 
+          "registrations": 10,
+          "min_registrations": 15
+        }
+      ]
+    },
+    {
+      "name": "General Chemistry I",
+      "course number": "101",
+      "category": "Chemistry",
+      "description": "Topics covered include measurements, significant figures, atomic structure, nomenclature, stoichiometry and chemical calculations, chemical reactions, thermochemistry and enthalpy changes, quantum theory of the atom and electron configuration, chemical bonding and molecular geometry.",
+      "status": "in progress", 
+      "classes": [
+        {
+          "class_id": "101-A",
+          "instructor": "Dr. Clark",
+          "status": "validated", 
+          "registrations": 25,
+          "min_registrations": 15
+        },
+        {
+          "class_id": "101-B",
+          "instructor": "Dr. Adams",
+          "status": "validated", 
+          "registrations": 18,
+          "min_registrations": 15
+        }
+      ]
+    },
+    {
+      "name": "Calculus I",
+      "course number": "101",
+      "category": "Mathematics",
+      "description": "Limits and continuity. Differentiation. Applications of derivatives. Integration. Inverse functions. Transcendental functions.",
+      "status": "open for registration", 
+      "classes": [
+        {
+          "class_id": "101-A",
+          "instructor": "Dr. Brown",
+          "status": "pending", 
+          "registrations": 12,
+          "min_registrations": 15
+        }
+      ]
+    },
+    {
+      "name": "Software Engineering",
+      "course number": "310",
+      "category": "Computer Science",
+      "description": "Fundamental concepts, principles and techniques for cost-effective engineering of quality software. Software process models, requirements specification, domain analysis, software design and modeling of structural and behavioral aspects of a software system.",
+      "status": "in progress", 
+      "classes": [
+        {
+          "class_id": "310-A",
+          "instructor": "Dr. White",
+          "status": "validated", 
+          "registrations": 30,
+          "min_registrations": 20
+        }
+      ]
+    },
+    {
+      "name": "General Physics For Engineering I",
+      "course number": "191",
+      "category": "Physics",
+      "description": "This course covers fundamental concepts in physics, including motion (linear, projectile, circular, rotational), laws of motion (Newton's laws), work, energy, linear momentum, collisions, angular momentum, elasticity, gravitation, waves, temperature, and heat.",
+      "status": "in progress", 
+      "classes": [
+        {
+          "class_id": "191-A",
+          "instructor": "Dr. Green",
+          "status": "validated", 
+          "registrations": 20,
+          "min_registrations": 15
+        }
+      ]
+    },
+    {
+      "name": "Calculus II",
+      "course number": "102",
+      "category": "Mathematics",
+      "description": "Techniques of integration. Applications of integration. Infinite series. Parametric equations and polar coordinates.",
+      "status": "open for registration", 
+      "classes": [
+        {
+          "class_id": "102-A",
+          "instructor": "Dr. Black",
+          "status": "pending", 
+          "registrations": 10,
+          "min_registrations": 15
+        }
+      ]
+    },
+    {
+      "name": "General Chemistry II",
+      "course number": "102",
+      "category": "Chemistry",
+      "description": "Topics covered include chemical kinetics, chemical equilibrium, acid-base equilibria, solubility product, thermodynamics, electrochemistry, and oxidation-reduction reactions.",
+      "status": "in progress", 
+      "classes": [
+        {
+          "class_id": "102-A",
+          "instructor": "Dr. Gray",
+          "status": "validated", 
+          "registrations": 25,
+          "min_registrations": 15
+        }
+      ]
+    },
+    {
+      "name": "Linear Algebra",
+      "course number": "201",
+      "category": "Mathematics",
+      "description": "Systems of linear equations. Matrices. Determinants. Vector spaces. Linear transformations. Eigenvalues and eigenvectors.",
+      "status": "open for registration", 
+      "classes": [
+        {
+          "class_id": "201-A",
+          "instructor": "Dr. White",
+          "status": "pending", 
+          "registrations": 8,
+          "min_registrations": 15
+        }
+      ]
+    }
+  ]
+}
+
