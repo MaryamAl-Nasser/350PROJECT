@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QU Student Management - Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+</head>
+<body>
+    <header>
+        <h1>QU Courses Management</h1>
+        <nav>
+            <button id="viewCoursesBtn">View Courses</button>
+            <button id="viewLearningPathBtn">My Learning Path</button>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="searchSection">
+            <h2>Search Courses</h2>
+            <div class="search-controls">
+                <input type="text" id="searchInput" placeholder="Search by course name...">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Databases">Databases</option>
+                    <option value="Mathematics">Mathematics</option>
+                </select>
+                <button id="searchBtn">Search</button>
+            </div>
+        </section>
+
+        <section id="coursesSection">
+            <h2>Available Courses</h2>
+            <div id="coursesList" class="courses-grid"></div>
+        </section>
+
+        <section id="learningPathSection" class="hidden">
+            <h2>My Learning Path</h2>
+            <div class="path-container">
+                <div class="path-column">
+                    <h3>Completed Courses</h3>
+                    <ul id="completedCourses"></ul>
+                </div>
+                <div class="path-column">
+                    <h3>In Progress</h3>
+                    <ul id="inProgressCourses"></ul>
+                </div>
+                <div class="path-column">
+                    <h3>Pending</h3>
+                    <ul id="pendingCourses"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="courseModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalCourseTitle"></h2>
+            <p id="modalCourseDesc"></p>
+            <div id="instructorsList"></div>
+            <button id="registerBtn">Register</button>
+            <div id="registrationMessage"></div>
+        </div>
+    </div>
+
+    <script src="loginPage/courses.js"></script>
+    <script src="loginPage/utils.js"></script>
+</body>
+</html>
