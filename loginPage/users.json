@@ -2,15 +2,48 @@
     "users": [
       {
         "username": "maryam",
-        "password": "password123"
+        "password": "password123",
+        "role": "student"
       },
       {
         "username": "maha",
-        "password": "securepass456"
+        "password": "securepass456",
+        "role": "student"
       },
       {
-        "username": "nora",
-        "password": "adminpass789"
+        "username": "ahmed",
+        "password": "mypassword123",
+        "role": "student"
+      },
+      {
+        "username": "ali",
+        "password": "mypassword111",
+        "role": "administrator"
+      },
+      {
+        "username": "Duaa",
+        "password": "adminpass",
+        "role": "administrator"
+      },
+      {
+        "username": "Badr",
+        "password": "adminpass2",
+        "role": "administrator"
+      },
+      {
+        "username": "Khalid",
+        "password": "instructorpass",
+        "role": "instructor"
+      },
+      {
+        "username": "Nuha",
+        "password": "hi84984",
+        "role": "instructor"
+      },
+      {
+        "username": "Ahmed",
+        "password": "12357",
+        "role": "instructor"
       }
     ]
   }
