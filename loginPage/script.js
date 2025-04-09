@@ -11,7 +11,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
             const user = users.find(user => user.username === username && user.password === password);
 
             if (user) {
-                // Redirect based on user role
                 if (user.role === 'student') {
                     document.location = '/mainPage/index.html'; 
                 } else if (user.role === 'administrator') {
