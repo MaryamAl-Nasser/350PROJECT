@@ -1,24 +1,27 @@
-document.getElementById('loginForm').addEventListener('submit', async function(event) {
+document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let username = document.getElementById('username').value;
-    let password = document.getElementById('password').value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    let response = await fetch('users.json');
-    if (response.ok) {
-        let users = await response.json();
+    fetch('users.json')
+        .then(response => response.json())
+        .then(data => {
+            const users = data.users;
+            const user = users.find(user => user.username === username && user.password === password);
 
-   
-        let user = users.users.find(u => u.username === username && u.password === password);
-
-        if (user) {
-            localStorage.setItem('loggedInUser', JSON.stringify(user));
-            document.location = '/mainPage/index.html';  
-        } else {
-          
-            document.getElementById('errorMsg').textContent = "Invalid username or password!";
-        }
-    } else {
-        document.getElementById('errorMsg').textContent = "Failed to load user data. Please try again later.";
-    }
+            if (user) {
+                // Redirect based on user role
+                if (user.role === 'student') {
+                    document.location = '/mainPage/index.html'; 
+                } else if (user.role === 'administrator') {
+                    document.location= '/admin/index.html'; 
+                } else if (user.role === 'instructor') {
+                    document.location = '/gradeSubmission/index.html';
+                }
+            } else {
+                document.getElementById("errorMsg").textContent = "Invalid username or password";
+                document.getElementById("errorMsg").style.color = "red";
+            }
+        });
 });
