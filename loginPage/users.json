@@ -99,14 +99,14 @@
         "password": "instructorpass",
         "name": "Dr. Noora Futais",
         "role": "instructor",
-        "teachingAreas":["CMPS151","CMPS310","CMPS205"]
+        "teachingAreas": ["CMPS151", "CMPS310", "CMPS205"]
       },
       {
         "username": "Mohammed",
         "password": "instructorpass",
         "name": "Dr. Mohammed Saleh",
         "role": "instructor",
-        "teachingAreas":["CMPS323","CMPS310"]
+        "teachingAreas": ["CMPS323", "CMPS310"]
       },
       {
         "username": "Saleh",
@@ -145,6 +145,7 @@
         "role": "instructor",
         "teachingAreas": ["MATH101", "MATH102"]
       },
+  
       {
         "username": "Sultan",
         "password": "instructorpass",
@@ -164,28 +165,28 @@
         "password": "instructorpass",
         "name": "Dr. Saeed Al-sayed",
         "role": "instructor",
-        "teachingAreas":["PHYS192"]
+        "teachingAreas": ["PHYS192"]
       },
       {
         "username": "Hamad",
         "password": "instructorpass",
         "name": "Dr. Hamad Al-tamimi",
         "role": "instructor",
-        "teachingAreas":["PHYS192","PHYS194"]
+        "teachingAreas": ["PHYS192", "PHYS194"]
       },
       {
         "username": "Maha",
         "password": "instructorpass111",
         "name": "Dr. Maha Al-wahabi",
         "role": "instructor",
-        "teachingAreas":["PHYS191","PHYS193"]
+        "teachingAreas": ["PHYS191", "PHYS193"]
       },
       {
         "username": "Fatima",
         "password": "instructorpass111",
         "name": "Dr. Fatima Al-yousef",
         "role": "instructor",
-        "teachingAreas":["PHYS191","PHYS193"]
+        "teachingAreas": ["PHYS191", "PHYS193"]
       },
 
       {
