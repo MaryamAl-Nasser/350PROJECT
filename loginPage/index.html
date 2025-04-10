@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
+   
+    <div class="container">
         <img src="qulogo.png" alt="Logo" class="logoimage">
+
         <h1>Login</h1>
         <form id="loginForm">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" required>
-            </div>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Login</button>
-            <div id="errorMessage" class="error-message"></div>
         </form>
+        <p id="errorMsg"></p>
     </div>
-    <script src="loginPage/auth.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
