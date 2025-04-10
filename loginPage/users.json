@@ -53,17 +53,17 @@
       },
       {
         "username": "ali",
-        "password": "mypassword111",
+        "password": "ali",
         "role": "administrator"
       },
       {
         "username": "Duaa",
-        "password": "adminpass",
+        "password": "Duaa",
         "role": "administrator"
       },
       {
         "username": "Badr",
-        "password": "adminpass2",
+        "password": "Badr",
         "role": "administrator"
       },
        {

@@ -1,7 +1,3 @@
-const viewCoursesBtn = document.getElementById('viewCoursesBtn');
-const viewLearningPathBtn = document.getElementById('viewLearningPathBtn');
-const logoutBtn = document.getElementById('logoutBtn');
-
 let allCourses = [];
 
 async function loadCourses() {
@@ -46,7 +42,6 @@ function displayCourses(courses) {
 function searchCourses() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
 
-
     if (allCourses.length === 0) {
         loadCourses().then(() => {
             filterAndDisplay(searchTerm);
@@ -72,14 +67,38 @@ function filterAndDisplay(searchTerm) {
     displayCourses(filteredCourses);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
 
+function showCourses() {
+    document.getElementById('content').innerHTML = `
+        <h2>Available Courses</h2>
+        <input type="text" id="searchInput" placeholder="Search by name or category..." />
+        <div id="courseList"></div>
+    `;
+
+    
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", () => {
+        const keyword = searchInput.value.toLowerCase();
+        const filtered = allCourses.filter(c =>
+            c.name.toLowerCase().includes(keyword) ||
+            c.category.toLowerCase().includes(keyword)
+        );
+        displayCourses(filtered);
+    });
+    displayCourses(allCourses); 
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
     loadCourses();
 
-    const viewCoursesBtn = document.getElementById('viewCoursesBtn');
-    if (viewCoursesBtn) {
-        viewCoursesBtn.addEventListener('click', function () {
-            window.location.href = 'index2.html';
-        });
+    const searchBtn = document.getElementById('searchBtn');
+    if (searchBtn) {
+        searchBtn.addEventListener('click', searchCourses);
+    }
+
+    const showCoursesButton = document.getElementById('showCoursesButton');
+    if (showCoursesButton) {
+        showCoursesButton.addEventListener('click', showCourses); // Add showCourses function here
     }
 });

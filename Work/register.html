@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - QU Student Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="qulogo.png" alt="Logo" class="logoimage">
+        <h1>Create Account</h1>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="regConfirmPassword">Confirm Password:</label>
+                <input type="password" id="regConfirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="regName">Full Name:</label>
+                <input type="text" id="regName" required>
+            </div>
+            <div class="form-group">
+                <label for="regId">Student ID:</label>
+                <input type="text" id="regId" required>
+            </div>
+            <button type="submit">Register</button>
+            <div id="regErrorMessage" class="error-message"></div>
+            <p>Already have an account? <a href="index.html">Login here</a></p>
+        </form>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

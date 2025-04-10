@@ -16,12 +16,28 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
+header {
+    background-color: #2d0814;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
 
 h1 {
     text-align: center;
-    color: #3d4852;
+    color: #ffffff;
     font-size: 32px;
     margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    text-align: center;
+    color: #080000;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #searchInput {

@@ -12,7 +12,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
             if (user) {
                 if (user.role === 'student') {
-                    document.location = '/mainPage/index.html'; 
+                    document.location = '/student/index.html'; 
                 } else if (user.role === 'administrator') {
                     document.location= '/admin/index.html'; 
                 } else if (user.role === 'instructor') {
