@@ -66,7 +66,6 @@
         "password": "adminpass2",
         "role": "administrator"
       },
-       //["CMPE263","CMPE213"]
        {
         "username": "Khalid",
         "password": "instructorpass",
@@ -137,14 +136,14 @@
         "password": "instructorpass",
         "name": "Dr. Khalid Al-ali",
         "role": "instructor",
-        "teachingAreas":["MATH101","MATH102"]
+        "teachingAreas": ["MATH101", "MATH102"]
       },
       {
         "username": "Hossam",
         "password": "instructorpass",
         "name": "Dr. Hossam Al-Qassim",
         "role": "instructor",
-        "teachingAreas":["MATH101","MATH102"]
+        "teachingAreas": ["MATH101", "MATH102"]
       },
       {
         "username": "Sultan",
@@ -213,18 +212,19 @@
         "teachingAreas":["CHEM101"]
       },
       {
+        "username": "Sara",
+        "password": "instructorpass111",
+        "name": "Prof. Sara Al-nasr",
+        "role": "instructor",
+        "teachingAreas": ["CHEM101"]
+      },
+      {
         "username": "Ali",
         "password": "instructorpass",
         "name": "Prof. Ali Al-yousef",
         "role": "instructor",
-        "teachingAreas":["CHEM101"]
-      },
-      {
-        "username": "Hassan",
-        "password": "instructorpass",
-        "name": "Prof. Hassan Al-sayed",
-        "role": "instructor",
-        "teachingAreas":["CHEM103"]
+        "teachingAreas": ["CHEM101"]
+      
       },
       {
         "username": "Nuha",
