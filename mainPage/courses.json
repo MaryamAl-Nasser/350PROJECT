@@ -204,7 +204,7 @@
         "category": "Computer Engineering",
         "courseCode": "CMPE213",
         "credits": 4,
-        "description": "Fundamental data structures and algorithms and their efficient implementation and application to problem solving. Linked lists, stacks, queues, hash tables, trees and graphs. Develop and analyze iterative and recursive algorithms such as searching and storing algorithms. The laboratory provides practical experience with data structures and algorithms.",
+        "description": "Fundamental data structures and algorithms and their efficient implementation and application to problem solving. Linked lists, stacks, queues, hash tables, trees and graphs. Develop and analyze iterative and recursive algorithms such as searching and storing algorithms. The laboratory provides practical experience with data structures and algorithms."
       },
       {
         "name": "Web development Fundamentals",
@@ -212,8 +212,7 @@
         "category": "Computer Science",
         "courseCode": "CMPS350",
         "credits": 3,
-        "description": "Concepts, protocols and enabling technologies related to the development of modern web applications. Fundamentals of designing and developing dynamic and interactive web applications using HTML and related standards, scripting languages, client-side and server-side programming. Hands-on Lab to design and develop Web applications.",
-        
+        "description": "Concepts, protocols and enabling technologies related to the development of modern web applications. Fundamentals of designing and developing dynamic and interactive web applications using HTML and related standards, scripting languages, client-side and server-side programming. Hands-on Lab to design and develop Web applications."
       },
       {
         "name": "Design and Analysis of Algorithms",
@@ -221,7 +220,7 @@
         "category": "Computer Science",
         "courseCode": "CMPS323",
         "credits": 3,
-        "description": "Analysis, design, and efficiency of algorithms illustrated by a comprehensive exposure to fundamental algorithms and various adopted techniques to solve different types of problems. Analysis of sorting, searching, and other algorithms; designing algorithms using techniques for problem-solving such as greedy methods, divide-and-conquer, backtracking, dynamic programming, and branch-and-bound techniques; complexity of algorithms.",
+        "description": "Analysis, design, and efficiency of algorithms illustrated by a comprehensive exposure to fundamental algorithms and various adopted techniques to solve different types of problems. Analysis of sorting, searching, and other algorithms; designing algorithms using techniques for problem-solving such as greedy methods, divide-and-conquer, backtracking, dynamic programming, and branch-and-bound techniques; complexity of algorithms."
 
       },
       {
@@ -230,7 +229,7 @@
         "category": "Arabic Language",
         "courseCode": "ARAB100",
         "credits": 3,
-        "description": "The course aims to provide students the important skills to communicate in Arabic; listening, speaking and reading, with attention to writing skills in relation to each.",
+        "description": "The course aims to provide students the important skills to communicate in Arabic; listening, speaking and reading, with attention to writing skills in relation to each."
 
       },
       {
@@ -239,7 +238,7 @@
         "category": "Arabic Language",
         "courseCode": "ARAB200",
         "credits": 3,
-        "description": "This course focuses on developing students' Arabic writing skills, emphasizing both scientific and professional communication. It covers functional, creative, traditional, and contemporary writing styles, along with descriptive and analytical approaches. The course promotes self-learning, collaboration, critical thinking, and dialogue, fostering cultural awareness and good citizenship. Students are evaluated based on their writing skills to achieve the desired learning outcomes.",
+        "description": "This course focuses on developing students' Arabic writing skills, emphasizing both scientific and professional communication. It covers functional, creative, traditional, and contemporary writing styles, along with descriptive and analytical approaches. The course promotes self-learning, collaboration, critical thinking, and dialogue, fostering cultural awareness and good citizenship. Students are evaluated based on their writing skills to achieve the desired learning outcomes."
 
       },
       {

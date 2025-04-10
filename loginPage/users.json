@@ -67,80 +67,78 @@
         "role": "administrator"
       },
        {
-        "username": "Khalid",
-        "password": "instructorpass",
+        "username": "Khalid123",
+        "password": "Khalid123",
         "name": "Dr. Khalid Abualsaud",
         "role": "instructor",
         "teachingAreas":["CMPE263","CMPE213"]
       },
       {
         "username": "Hela",
-        "password": "instructorpass",
+        "password": "Hela",
         "name": "Dr. Hela chamkhia",
         "role": "instructor",
         "teachingAreas":["CMPE263"]
       },
       {
         "username": "Zeyad",
-        "password": "instructorpass",
+        "password": "Zeyad",
         "name": "Dr. Zeyad Ali",
         "role": "instructor",
         "teachingAreas":["CMPE213","CMPE263"]
       },
        {
         "username": "Muchahid",
-        "password": "instructorpass",
+        "password": "Muchahid",
         "name": "Dr. Muchahid kutlu",
         "role": "instructor",
         "teachingAreas":["CMPS151","CMPS205"]
       },
       {
         "username": "Noora",
-        "password": "instructorpass",
+        "password": "Noora",
         "name": "Dr. Noora Futais",
         "role": "instructor",
         "teachingAreas": ["CMPS151", "CMPS310", "CMPS205"]
       },
       {
-        "username": "Mohammed",
-        "password": "instructorpass",
+        "username": "Mohammed111",
+        "password": "Mohammed111",
         "name": "Dr. Mohammed Saleh",
         "role": "instructor",
         "teachingAreas": ["CMPS323", "CMPS310"]
       },
       {
         "username": "Saleh",
-        "password": "instructorpass",
+        "password": "Saleh",
         "name": "Dr. Saleh Al-hazbi",
         "role": "instructor",
         "teachingAreas":["CMPS303","CMPS350"]
       },
       {
         "username": "Mahmoud",
-        "password": "instructorpass",
+        "password": "Mahmoud",
         "name": "Dr. Mahmoud Barhamgi",
         "role": "instructor",
         "teachingAreas":["CMPS350","CMPS323"]
       },
       {
         "username": "Abdulaziz",
-        "password": "instructorpass",
+        "password": "Abdulaziz",
         "name": "Dr. Abdulaziz Al-ali",
         "role": "instructor",
         "teachingAreas":["CMPS323","CMPS350"]
       },
-
-
       {
         "username": "Khalid",
-        "password": "instructorpass",
+        "password": "Khalid",
         "name": "Dr. Khalid Al-ali",
         "role": "instructor",
         "teachingAreas": ["MATH101", "MATH102"]
       },
       {
         "username": "Hossam",
-        "password": "instructorpass",
+        "password": "Hossam",
         "name": "Dr. Hossam Al-Qassim",
         "role": "instructor",
         "teachingAreas": ["MATH101", "MATH102"]
@@ -148,42 +146,42 @@
   
       {
         "username": "Sultan",
-        "password": "instructorpass",
+        "password": "Sultan",
         "name": "Dr. Sultan Al-rashid",
         "role": "instructor",
-        "teachingAreas":["MATH201"]
+        "teachingAreas":["MATH231"]
       },
       {
         "username": "Mohammed",
-        "password": "instructorpass",
+        "password": "Mohammed",
         "name": "Dr. Mohammed Al-khaldi",
         "role": "instructor",
-        "teachingAreas":["MATH201"]
+        "teachingAreas":["MATH231"]
       },
       {
         "username": "Saeed",
-        "password": "instructorpass",
+        "password": "Saeed",
         "name": "Dr. Saeed Al-sayed",
         "role": "instructor",
         "teachingAreas": ["PHYS192"]
       },
       {
         "username": "Hamad",
-        "password": "instructorpass",
+        "password": "Hamad",
         "name": "Dr. Hamad Al-tamimi",
         "role": "instructor",
         "teachingAreas": ["PHYS192", "PHYS194"]
       },
       {
         "username": "Maha",
-        "password": "instructorpass111",
+        "password": "Maha",
         "name": "Dr. Maha Al-wahabi",
         "role": "instructor",
         "teachingAreas": ["PHYS191", "PHYS193"]
       },
       {
         "username": "Fatima",
-        "password": "instructorpass111",
+        "password": "Fatima",
         "name": "Dr. Fatima Al-yousef",
         "role": "instructor",
         "teachingAreas": ["PHYS191", "PHYS193"]
@@ -191,52 +189,51 @@
 
       {
         "username": "David",
-        "password": "instructorpass111",
+        "password": "David",
         "name": "Dr. David johnson",
         "role": "instructor",
         "teachingAreas":["ENGL202","ENGL203"]
       },
       {
         "username": "Easton",
-        "password": "instructorpass111",
+        "password": "Easton",
         "name": "Dr. Easton brown",
         "role": "instructor",
         "teachingAreas":["ENGL202","ENGL203"]
       },
 
-
       {
         "username": "Sara",
-        "password": "instructorpass111",
+        "password": "Sara",
         "name": "Prof. Sara Al-nasr",
         "role": "instructor",
         "teachingAreas":["CHEM101"]
       },
-      {
-        "username": "Sara",
-        "password": "instructorpass111",
-        "name": "Prof. Sara Al-nasr",
-        "role": "instructor",
-        "teachingAreas": ["CHEM101"]
-      },
+   
       {
         "username": "Ali",
-        "password": "instructorpass",
+        "password": "Ali",
         "name": "Prof. Ali Al-yousef",
         "role": "instructor",
-        "teachingAreas": ["CHEM101"]
-      
+        "teachingAreas":["CHEM101"]
+      },
+      {
+        "username": "Hassan",
+        "password": "instructorpass",
+        "name": "Prof. Hassan Al-sayed",
+        "role": "instructor",
+        "teachingAreas":["CHEM103"]
       },
       {
         "username": "Nuha",
-        "password": "hi84984",
+        "password": "Nuha",
         "name": "Dr. Nuha Al-mansouri",
         "role": "instructor",
         "teachingAreas":["ARAB100","ARAB200"]
       },
       {
         "username": "Ahmed",
-        "password": "12357",
+        "password": "Ahmed",
         "name": "Dr. Ahmed Al-dosari",
         "role": "instructor",
         "teachingAreas":["ARAB100","ARAB200"]
