@@ -8,7 +8,9 @@ async function loadCourses() {
             name: course.name,
             courseNumber: course["course number"], // Fixing space issue
             category: course.category,
-            description: course.description
+            description: course.description,
+            courseCode: course.courseCode,
+            
         }));
         displayCourses(allCourses);
     } else {
@@ -32,6 +34,7 @@ function displayCourses(courses) {
             <h2>${course.name}</h2>
             <p><strong>Category:</strong> ${course.category}</p>
             <p><strong>Course Number:</strong> ${course.courseNumber}</p>
+            <p><strong>Course Code:</strong> ${course.courseCode}</p>
             <p>${course.description}</p>
         `;
         courseListContainer.appendChild(courseDiv);
