@@ -10,8 +10,8 @@
         "RequirementsCourses": [],
         "status": " ",
         "instructors": [ 
-            {"name": "Dr. ", "availableSlots": },
-            {"name": "Prof. Johnson", "availableSlots": }
+            {"name": "Dr. Muchahid kutlu", "availableSlots": 40},
+            {"name": "Dr. Noora Futais", "availableSlots":40 }
         ]
     },
    {
@@ -20,7 +20,13 @@
         "category": "Chemistry",
         "courseCode": "CHEM101",
         "credits": 3,
-        "description": "Topics covered include measurements, significant figures, atomic structure, nomenclature, stoichiometry and chemical calculations, chemical reactions, thermochemistry and enthalpy changes, quantum theory of the atom and electron configuration, chemical bonding and molecular geometry. The above topics are presented using experiential learning strategy in which the students will gain a strong foundation in chemical principles and their applications in different fields."
+        "description": "Topics covered include measurements, significant figures, atomic structure, nomenclature, stoichiometry and chemical calculations, chemical reactions, thermochemistry and enthalpy changes, quantum theory of the atom and electron configuration, chemical bonding and molecular geometry. The above topics are presented using experiential learning strategy in which the students will gain a strong foundation in chemical principles and their applications in different fields.",
+        "RequirementsCourses": [],
+        "status": " ",
+        "instructors": [ 
+            {"name": "Prof. Sara Al-nasr", "availableSlots": 40},
+            {"name": "Prof. Ali Al-yousef", "availableSlots":40 }
+        ]
       },
       {
         "name": "Calculus I",
@@ -28,7 +34,13 @@
         "category": "Mathematics",
         "courseCode": "MATH101",
         "credits": 3,
-        "description": "Limits and continuity. Differentiation. Applications of derivatives. Integration. Inverse functions. Transcendental functions."
+        "description": "Limits and continuity. Differentiation. Applications of derivatives. Integration. Inverse functions. Transcendental functions.",
+        "RequirementsCourses": [],
+        "status": " ",
+        "instructors": [ 
+            {"name": "Dr. Khalid Al-ali", "availableSlots": 40},
+            {"name": "Dr. Hossam Al-Qassim", "availableSlots":40 }
+        ]
       } ,
       {
         "name": "Software Engineering",
@@ -36,7 +48,13 @@
         "category": "Computer Science",
         "courseCode": "CMPS310",
         "credits": 4,
-        "description": "Fundamental concepts, principles and techniques for cost-effective engineering of quality software. Software process models, requirements specification, domain analysis, software design and modeling of structural and behavioral aspects of a software system using a common modeling language, implementation, testing and software project management. The laboratory provides practical experience with software engineering and supporting tools."
+        "description": "Fundamental concepts, principles and techniques for cost-effective engineering of quality software. Software process models, requirements specification, domain analysis, software design and modeling of structural and behavioral aspects of a software system using a common modeling language, implementation, testing and software project management. The laboratory provides practical experience with software engineering and supporting tools.",
+        "RequirementsCourses": [],
+        "status": " ",
+        "instructors": [ 
+            {"name": "Dr. Noora Futais", "availableSlots": 40},
+            {"name": "Dr. Mohammed Saleh", "availableSlots":40 }
+        ]
       },
       {
         "name": "General Physics For Engineering I",
@@ -44,7 +62,13 @@
         "category": "Physics",
         "courseCode": "PHYS191",
         "credits": 3,
-        "description": "This course covers fundamental concepts in physics, including motion (linear, projectile, circular, rotational), laws of motion (Newton's laws), work, energy, linear momentum, collisions, angular momentum, elasticity, gravitation, waves, temperature, and heat. It explores various principles like conservation of energy, momentum, and angular momentum, as well as thermodynamic laws and their applications in real-world phenomena."
+        "description": "This course covers fundamental concepts in physics, including motion (linear, projectile, circular, rotational), laws of motion (Newton's laws), work, energy, linear momentum, collisions, angular momentum, elasticity, gravitation, waves, temperature, and heat. It explores various principles like conservation of energy, momentum, and angular momentum, as well as thermodynamic laws and their applications in real-world phenomena.",
+        "RequirementsCourses": [],
+        "status": " ",
+        "instructors": [ 
+            {"name": "Dr. Maha Al-wahabi", "availableSlots": 0},
+            {"name": "Dr. Fatima Al-yousef", "availableSlots":0 }
+        ]
       },
       {
         "name": "Calculus II",
@@ -52,7 +76,13 @@
         "category": "Mathematics",
         "courseCode": "MATH102",
         "credits": 3,
-        "description": "Techniques of integration. Applications of integration. Infinite series. Parametric equations and polar coordinates."
+        "description": "Techniques of integration. Applications of integration. Infinite series. Parametric equations and polar coordinates.",
+        "RequirementsCourses": ["MATH101"],
+        "status": " ",
+        "instructors": [ 
+          {"name": "Dr. Khalid Al-ali", "availableSlots": 40},
+            {"name": "Dr. Hossam Al-Qassim", "availableSlots":40 }
+        ]
       },
       {
         "name": "Experimental General chemistry I",
@@ -60,7 +90,12 @@
         "category": "Chemistry",
         "courseCode": "CHEM103",
         "credits": 1,
-        "description": "This course is designed to provide students with hands-on experience in the laboratory, reinforcing the concepts learned in General Chemistry I. Students will conduct experiments related to measurements, stoichiometry, chemical reactions, and thermochemistry. The course emphasizes safety, proper laboratory techniques, and data analysis. Students will also learn to write formal lab reports and present their findings."
+        "description": "This course is designed to provide students with hands-on experience in the laboratory, reinforcing the concepts learned in General Chemistry I. Students will conduct experiments related to measurements, stoichiometry, chemical reactions, and thermochemistry. The course emphasizes safety, proper laboratory techniques, and data analysis. Students will also learn to write formal lab reports and present their findings.",
+        "RequirementsCourses": ["CHEM101"],
+        "status": " ",
+        "instructors": [ 
+            {"name": "Prof. Hassan Al-sayed", "availableSlots": 40}
+        ]
       },
       
       {
@@ -69,7 +104,13 @@
         "category": "Mathematics",
         "courseCode": "MATH231",
         "credits": 3,
-        "description": "Systems of linear equations. Matrices. Determinants. Vector spaces. Linear transformations. Eigenvalues and eigenvectors."
+        "description": "Systems of linear equations. Matrices. Determinants. Vector spaces. Linear transformations. Eigenvalues and eigenvectors.",
+        "RequirementsCourses": ["MATH101"],
+        "status": " ",
+        "instructors": [ 
+            {"name": "Dr. Sultan Al-rashid", "availableSlots": 40},
+            {"name": "Dr. Mohammed Al-khaldi", "availableSlots":40 }
+        ]
       },
       {
         "name": "General Physics For Engineering II",
@@ -77,7 +118,13 @@
         "category": "Physics",
         "courseCode": "PHYS193",
         "credits": 3,
-        "description": "This course covers fundamental concepts in physics, including thermodynamics, kinetic theory, heat transfer, fluids, oscillations, waves, sound, and optics. It explores various principles like conservation of energy and momentum, thermodynamic laws, and their applications in real-world phenomena."
+        "description": "This course covers fundamental concepts in physics, including thermodynamics, kinetic theory, heat transfer, fluids, oscillations, waves, sound, and optics. It explores various principles like conservation of energy and momentum, thermodynamic laws, and their applications in real-world phenomena.",
+        "RequirementsCourses": ["PHYS191","PHYS192"],
+        "status": " ",
+        "instructors": [ 
+          {"name": "Dr. Maha Al-wahabi", "availableSlots": 40},
+          {"name": "Dr. Fatima Al-yousef", "availableSlots":40 }
+        ]
       },
       {
         "name": "Experimental General Physics For Engineering I",
@@ -85,7 +132,13 @@
         "category": "Physics",
         "courseCode": "PHYS192",
         "credits": 1,
-        "description": "This is the Lab-based course covering the subject matter of PHYS 191.The course presents an introduction to the methods of experimental physics Emphasis is on developing student’s skills in experimental techniques, data analysis, and scientific reporting of lab work. During the course students execute a series of experiments on Kinematics of motion, kinetic and potential energy, Oscillatory motion, Thermal properties of matter, and Viscosity. The course includes computer based experiments Classical Mechanics."
+        "description": "This is the Lab-based course covering the subject matter of PHYS 191.The course presents an introduction to the methods of experimental physics Emphasis is on developing student’s skills in experimental techniques, data analysis, and scientific reporting of lab work. During the course students execute a series of experiments on Kinematics of motion, kinetic and potential energy, Oscillatory motion, Thermal properties of matter, and Viscosity. The course includes computer based experiments Classical Mechanics.",
+        "RequirementsCourses": ["PHYS191"],
+        "status": " ",
+        "instructors": [ 
+          {"name": "Dr. Hamad Al-tamimi", "availableSlots": 40},
+          {"name": "Dr. Saeed Al-sayed", "availableSlots":40 }
+        ]
       },
       {
         "name": "Experimental General Physics For Engineering II",
@@ -93,15 +146,27 @@
         "category": "Physics",
         "courseCode": "PHYS194",
         "credits": 1,
-        "description": "This is the Lab-based course covering the subject matter of PHYS 193. The course presents an introduction to the methods of experimental physics Emphasis is on developing student’s skills in experimental techniques, data analysis, and scientific reporting of lab work. During the course students execute a series of experiments on Thermodynamics, Kinetic theory, Waves and Sound, Optics, and Electricity and Magnetism. The course includes computer based experiments Classical Mechanics."
+        "description": "This is the Lab-based course covering the subject matter of PHYS 193. The course presents an introduction to the methods of experimental physics Emphasis is on developing student’s skills in experimental techniques, data analysis, and scientific reporting of lab work. During the course students execute a series of experiments on Thermodynamics, Kinetic theory, Waves and Sound, Optics, and Electricity and Magnetism. The course includes computer based experiments Classical Mechanics.",
+        "RequirementsCourses": ["PHYS191","PHYS192","PHYS193"],
+        "status": " ",
+        "instructors": [ 
+          {"name": "Dr. Hamad Al-tamimi", "availableSlots": 40}
+        ]
       },
+    
       {
         "name": "Discrete Structures",
         "course number": "205",
         "category": "Computer Science",
         "courseCode": "CMPS205",
         "credits": 3,
-        "description": "Introduction to the elements of mathematics applicable to the computing field. Logic and methods of proof; logic gates; Boolean algebra and minimization; set theory; relations and functions; sequences and sums; induction; numbering systems and combinatorics."
+        "description": "Introduction to the elements of mathematics applicable to the computing field. Logic and methods of proof; logic gates; Boolean algebra and minimization; set theory; relations and functions; sequences and sums; induction; numbering systems and combinatorics.",
+        "RequirementsCourses": [],
+        "status": " ",
+        "instructors": [ 
+          {"name": "Dr. Noora Futais", "availableSlots": 40},
+          {"name": "Dr. Muchahid kutlu", "availableSlots":40 }
+        ]
       },
       {
         "name": "Computer Architecture and Organization",
@@ -109,15 +174,28 @@
         "category": "Computer Engineering",
         "courseCode": "CMPE263",
         "credits": 3,
-        "description": "Higher-level concepts in computer architecture. Data representation; classic components of a computer; performance measures for computers; CPU types, design, organization, instruction-level description; processor programming, addressing modes, assembly language; main and cache memory, caching techniques, basics of parallel architectures."
+        "description": "Higher-level concepts in computer architecture. Data representation; classic components of a computer; performance measures for computers; CPU types, design, organization, instruction-level description; processor programming, addressing modes, assembly language; main and cache memory, caching techniques, basics of parallel architectures.",
+        "RequirementsCourses": [],
+        "status": " ",
+        "instructors": [ 
+          {"name": "Dr. Khalid Abualsaud", "availableSlots": 40},
+          {"name": "Dr. Hela chamkhia", "availableSlots":40 },
+          {"name": "Dr. Zeyad Ali", "availableSlots":40 }
+        ]
       },
+      
       {
         "name": "Data Structures",
         "course number": "303",
         "category": "Computer Science",
         "courseCode": "CMPS303",
         "credits": 3,
-        "description": "Fundamental data structures and algorithms and their efficient implementation and application to problem solving. Linked lists, stacks, queues, hash tables, trees and graphs. Develop and analyze iterative and recursive algorithms such as searching and storing algorithms. The laboratory provides practical experience with data structures and algorithms."
+        "description": "Fundamental data structures and algorithms and their efficient implementation and application to problem solving. Linked lists, stacks, queues, hash tables, trees and graphs. Develop and analyze iterative and recursive algorithms such as searching and storing algorithms. The laboratory provides practical experience with data structures and algorithms.",
+        "RequirementsCourses": [],
+        "status": " ",
+        "instructors": [ 
+          {"name": "Dr. Saleh Al-hazbi", "availableSlots": 40}
+        ]
        
       },
       {
@@ -126,7 +204,7 @@
         "category": "Computer Engineering",
         "courseCode": "CMPE213",
         "credits": 4,
-        "description": "Fundamental data structures and algorithms and their efficient implementation and application to problem solving. Linked lists, stacks, queues, hash tables, trees and graphs. Develop and analyze iterative and recursive algorithms such as searching and storing algorithms. The laboratory provides practical experience with data structures and algorithms."
+        "description": "Fundamental data structures and algorithms and their efficient implementation and application to problem solving. Linked lists, stacks, queues, hash tables, trees and graphs. Develop and analyze iterative and recursive algorithms such as searching and storing algorithms. The laboratory provides practical experience with data structures and algorithms.",
       },
       {
         "name": "Web development Fundamentals",
@@ -134,7 +212,8 @@
         "category": "Computer Science",
         "courseCode": "CMPS350",
         "credits": 3,
-        "description": "Concepts, protocols and enabling technologies related to the development of modern web applications. Fundamentals of designing and developing dynamic and interactive web applications using HTML and related standards, scripting languages, client-side and server-side programming. Hands-on Lab to design and develop Web applications."
+        "description": "Concepts, protocols and enabling technologies related to the development of modern web applications. Fundamentals of designing and developing dynamic and interactive web applications using HTML and related standards, scripting languages, client-side and server-side programming. Hands-on Lab to design and develop Web applications.",
+        
       },
       {
         "name": "Design and Analysis of Algorithms",
@@ -142,7 +221,8 @@
         "category": "Computer Science",
         "courseCode": "CMPS323",
         "credits": 3,
-        "description": "Analysis, design, and efficiency of algorithms illustrated by a comprehensive exposure to fundamental algorithms and various adopted techniques to solve different types of problems. Analysis of sorting, searching, and other algorithms; designing algorithms using techniques for problem-solving such as greedy methods, divide-and-conquer, backtracking, dynamic programming, and branch-and-bound techniques; complexity of algorithms."
+        "description": "Analysis, design, and efficiency of algorithms illustrated by a comprehensive exposure to fundamental algorithms and various adopted techniques to solve different types of problems. Analysis of sorting, searching, and other algorithms; designing algorithms using techniques for problem-solving such as greedy methods, divide-and-conquer, backtracking, dynamic programming, and branch-and-bound techniques; complexity of algorithms.",
+
       },
       {
         "name": "Arabic Language I",
@@ -150,7 +230,8 @@
         "category": "Arabic Language",
         "courseCode": "ARAB100",
         "credits": 3,
-        "description": "The course aims to provide students the important skills to communicate in Arabic; listening, speaking and reading, with attention to writing skills in relation to each."
+        "description": "The course aims to provide students the important skills to communicate in Arabic; listening, speaking and reading, with attention to writing skills in relation to each.",
+
       },
       {
         "name": "Arabic Language II",
@@ -158,7 +239,8 @@
         "category": "Arabic Language",
         "courseCode": "ARAB200",
         "credits": 3,
-        "description": "This course focuses on developing students' Arabic writing skills, emphasizing both scientific and professional communication. It covers functional, creative, traditional, and contemporary writing styles, along with descriptive and analytical approaches. The course promotes self-learning, collaboration, critical thinking, and dialogue, fostering cultural awareness and good citizenship. Students are evaluated based on their writing skills to achieve the desired learning outcomes."
+        "description": "This course focuses on developing students' Arabic writing skills, emphasizing both scientific and professional communication. It covers functional, creative, traditional, and contemporary writing styles, along with descriptive and analytical approaches. The course promotes self-learning, collaboration, critical thinking, and dialogue, fostering cultural awareness and good citizenship. Students are evaluated based on their writing skills to achieve the desired learning outcomes.",
+
       },
       {
         "name": " English Language I Post Foundation",
@@ -179,4 +261,4 @@
       
     ]
       
-}
+  }
