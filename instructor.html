@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instructor Grade Submission</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .instructor-header {
+      background-color: #2d0814;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .controls button {
+      background-color: #90143c;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background-color: #91790f;
+    }
+
+    .course-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .course-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .course-card h3 {
+      color: #90143c;
+    }
+
+    .course-card ul {
+      padding-left: 20px;
+    }
+
+    .course-card li {
+      margin-bottom: 10px;
+    }
+
+    .course-card input {
+      margin-left: 10px;
+      width: 60px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .controls {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .controls button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="instructor-header">
+    <h1>Instructor Grade Submission</h1>
+  </header>
+
+  <nav class="controls">
+    <button onclick="viewInstructorCourses()">View My Classes</button>
+  </nav>
+
+  <main class="course-container">
+    <div id="instructor-courses"></div>
+  </main>
+
+  <script>
+    let users = [];
+
+    async function loadUsers() {
+      try {
+        const response = await fetch('data/users.json');
+        if (!response.ok) throw new Error('Failed to load users');
+        users = await response.json();
+        console.log("Users loaded:", users);
+      } catch (err) {
+        alert("Error loading users: " + err.message);
+      }
+    }
+
+    function viewInstructorCourses() {
+      const instructorUsername = prompt("Enter your username:").toLowerCase();
+      const instructor = users.find(user =>
+        user.username.toLowerCase() === instructorUsername &&
+        user.role === "instructor"
+      );
+
+      if (!instructor) {
+        alert("Instructor not found.");
+        console.log("Instructor not found:", instructorUsername);
+        return;
+      }
+
+      const container = document.getElementById("instructor-courses");
+      container.innerHTML = `<h3>Your In-Progress Courses</h3>`;
+
+      // Loop through the instructor's teaching areas and find students who need grades
+      instructor.teachingAreas.forEach(courseCode => {
+        const students = users.filter(user => user.role === "student" &&
+          user.inProgressCourses &&
+          user.inProgressCourses.some(course => course.code === courseCode && course.grade === 0)
+        );
+
+        if (students.length === 0) {
+          container.innerHTML += `<p>No students with pending grades in ${courseCode}.</p>`;
+          return;
+        }
+
+        const studentList = students.map(student => {
+          const course = student.inProgressCourses.find(c => c.code === courseCode);
+          return `  
+            <li>
+              ${student.username} - ${course.name} 
+              <input type="number" id="grade_${student.username}_${courseCode}" min="0" max="100" placeholder="Enter grade" />
+              <button onclick="submitGrade('${student.username}', '${courseCode}', this)">Submit Grade</button>
+            </li>
+          `;
+        }).join("");
+
+        container.innerHTML += `
+          <div class="course-card">
+            <h3>${courseCode}</h3>
+            <ul>${studentList}</ul>
+          </div>
+        `;
+      });
+    }
+
+    function submitGrade(studentUsername, courseCode, buttonElement) {
+      const gradeInput = document.getElementById(`grade_${studentUsername}_${courseCode}`);
+      const grade = parseInt(gradeInput.value);
+
+      if (isNaN(grade) || grade < 0 || grade > 100) {
+        alert("Please enter a valid grade between 0 and 100.");
+        return;
+      }
+
+      const student = users.find(user => user.username === studentUsername);
+      if (!student) {
+        alert("Student not found.");
+        return;
+      }
+
+      const course = student.inProgressCourses.find(c => c.code === courseCode);
+      if (!course) {
+        alert("Course not found for the student.");
+        return;
+      }
+
+      // Update the grade
+      course.grade = grade;
+      gradeInput.disabled = true;
+      buttonElement.disabled = true;
+
+      alert(`Grade submitted for ${studentUsername}: ${grade}`);
+    }
+
+    window.onload = loadUsers;
+  </script>
+
+</body>
+</html>
+
+
