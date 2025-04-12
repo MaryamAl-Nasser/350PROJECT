@@ -1,17 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if user is logged in
+
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
     if (!currentUser) {
         window.location.href = 'index.html';
         return;
     }
 
-    // Initialize user course arrays if they don't exist
     currentUser.completedCourses = currentUser.completedCourses || [];
     currentUser.inProgressCourses = currentUser.inProgressCourses || [];
     currentUser.pendingCourses = currentUser.pendingCourses || [];
 
-    // DOM elements
     const viewCoursesBtn = document.getElementById('viewCoursesBtn');
     const viewLearningPathBtn = document.getElementById('viewLearningPathBtn');
     const registerCourseBtn = document.getElementById('registerCourseBtn');
@@ -145,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Check if already registered
+    
         const isAlreadyRegistered = 
             currentUser.pendingCourses.some(c => c.code === courseCode) ||
             currentUser.inProgressCourses.some(c => c.code === courseCode) ||
@@ -156,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Check prerequisites again (in case UI was bypassed)
+        
         if (!checkPrerequisites(course)) {
             alert('You do not meet the prerequisites for this course');
             return;
@@ -169,21 +167,19 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Register for the course
         currentUser.pendingCourses.push({
             code: course.code,
             name: course.name,
             instructor: availableInstructor.name
         });
 
-        // Decrement available slot
+       
         availableInstructor.availableSlots--;
 
-        // Update user data
+        
         sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUserInStorage(currentUser);
         
-        // Update courses data
         updateCourseInStorage(allCourses);
 
         alert(`Successfully registered for ${course.name}!`);
@@ -200,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 registeredUsers[userIndex] = updatedUser;
                 localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
             } else {
-                // If not found in registeredUsers, add them (for new registrations)
+              
                 registeredUsers.push(updatedUser);
                 localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
             }
