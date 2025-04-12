@@ -94,10 +94,9 @@
   <script>
     let users = [];
 
-    // Load the users data from the users.json file
     async function loadUsers() {
       try {
-        const response = await fetch('data/user.json');
+        const response = await fetch('data/users.json');
         if (!response.ok) throw new Error('Failed to load users');
         users = await response.json();
         console.log("Users loaded:", users);
@@ -106,13 +105,11 @@
       }
     }
 
-    // Function to view the instructor's courses
     function viewInstructorCourses() {
       const instructorUsername = prompt("Enter your username:").toLowerCase();
-      // Find the instructor from the users data
       const instructor = users.find(user =>
         user.username.toLowerCase() === instructorUsername &&
-        user.role === "administrator" // Administrator represents the instructor role in your json
+        user.role === "instructor"
       );
 
       if (!instructor) {
@@ -124,11 +121,11 @@
       const container = document.getElementById("instructor-courses");
       container.innerHTML = `<h3>Your In-Progress Courses</h3>`;
 
-      // Find all students with in-progress courses assigned to the instructor
+      // Loop through the instructor's teaching areas and find students who need grades
       instructor.teachingAreas.forEach(courseCode => {
         const students = users.filter(user => user.role === "student" &&
           user.inProgressCourses &&
-          user.inProgressCourses.some(course => course.code === courseCode && course.grade === 0) // Only consider students with grade 0
+          user.inProgressCourses.some(course => course.code === courseCode && course.grade === 0)
         );
 
         if (students.length === 0) {
@@ -138,10 +135,10 @@
 
         const studentList = students.map(student => {
           const course = student.inProgressCourses.find(c => c.code === courseCode);
-          return `
+          return `  
             <li>
-              ${student.username} - ${course.name}
-              <input type="number" id="grade_${student.username}_${courseCode}" min="0" max="100" placeholder="Enter grade">
+              ${student.username} - ${course.name} 
+              <input type="number" id="grade_${student.username}_${courseCode}" min="0" max="100" placeholder="Enter grade" />
               <button onclick="submitGrade('${student.username}', '${courseCode}', this)">Submit Grade</button>
             </li>
           `;
@@ -156,7 +153,6 @@
       });
     }
 
-    // Function to submit grades
     function submitGrade(studentUsername, courseCode, buttonElement) {
       const gradeInput = document.getElementById(`grade_${studentUsername}_${courseCode}`);
       const grade = parseInt(gradeInput.value);
@@ -178,7 +174,7 @@
         return;
       }
 
-      // Set the grade
+      // Update the grade
       course.grade = grade;
       gradeInput.disabled = true;
       buttonElement.disabled = true;
@@ -191,4 +187,5 @@
 
 </body>
 </html>
+
 
