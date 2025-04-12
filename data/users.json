@@ -2,6 +2,7 @@
       {
         "username": "maryam",
         "password": "password123",
+        "stdientId": "123456789",
         "role": "student",
         "completedCourses": [
             {"code": "CMPS151", "name": "Programming Concepts", "grade": 85},
@@ -22,6 +23,7 @@
       {
         "username": "maha",
         "password": "securepass456",
+        "stdientId": "987654321",
         "role": "student",
         "completedCourses": [
           {"code": "CMPS323", "name": "Design and Analysis of Algorithms", "grade": 85},
@@ -29,7 +31,7 @@
           
       ],
       "inProgressCourses": [
-
+        {"code": "CMPS350", "name": "Web development Fundamentals", "instructor":"Dr. Mahmoud Barhamgi" ,"grade": 0}
       ],
       "pendingCourses": [
         
@@ -38,6 +40,7 @@
       {
         "username": "ahmed",
         "password": "mypassword123",
+        "stdientId": "456789123",
         "role": "student",
         "completedCourses": [
           {"code": "CMPS303", "name": "Data Structures", "grade": 85},
