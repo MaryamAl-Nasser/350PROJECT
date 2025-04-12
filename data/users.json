@@ -1,16 +1,18 @@
-{
-    "users": [
+[
       {
         "username": "maryam",
         "password": "password123",
         "role": "student",
         "completedCourses": [
-            {"code": "CMPS151", "name": "Programming I", "grade": 85},
-            {"code": "CMPS152", "name": "Programming II", "grade": 78},
-            {"code": "MATH101", "name": "Calculus I", "grade": 92}
+            {"code": "CMPS151", "name": "Programming Concepts", "grade": 85},
+            {"code": "MATH101", "name": "Calculus I", "grade": 92},
+            {"code": "PHYS191", "name": "Physics I", "grade": 88},
+            {"code": "CHEM101", "name": "Chemistry I", "grade": 90},
+            {"code": "ENGL202", "name": "English Language I Post Foundation", "grade": 95}
             
         ],
         "inProgressCourses": [
+          {"code": "ENGL202", "name": "English Language I Post Foundation", "instructor":"Dr. David johnson" ,"grade": 0}
 
         ],
         "pendingCourses": [
@@ -22,8 +24,7 @@
         "password": "securepass456",
         "role": "student",
         "completedCourses": [
-          {"code": "CMPS151", "name": "Programming I", "grade": 85},
-          {"code": "CMPS152", "name": "Programming II", "grade": 78},
+          {"code": "CMPS323", "name": "Design and Analysis of Algorithms", "grade": 85},
           {"code": "MATH101", "name": "Calculus I", "grade": 92}
           
       ],
@@ -39,9 +40,8 @@
         "password": "mypassword123",
         "role": "student",
         "completedCourses": [
-          {"code": "CMPS151", "name": "Programming I", "grade": 85},
-          {"code": "CMPS152", "name": "Programming II", "grade": 78},
-          {"code": "MATH101", "name": "Calculus I", "grade": 92}
+          {"code": "CMPS303", "name": "Data Structures", "grade": 85},
+          {"code": "ARAB100", "name": "Arabic Language I", "grade": 92}
           
       ],
       "inProgressCourses": [
@@ -238,6 +238,5 @@
         "role": "instructor",
         "teachingAreas":["ARAB100","ARAB200"]
       }
-    ]
-  }
+]
   

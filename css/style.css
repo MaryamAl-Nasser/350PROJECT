@@ -1,9 +1,9 @@
-/* style.css - Main styles */
+/* loginPage styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #e6d5dd;
     color: #040000;
 }
 
@@ -15,7 +15,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: white;
+    font-family: monospace;
 }
+
 .logoimage {
     position: absolute;
     top: 80px; 
@@ -57,11 +60,12 @@ button:hover {
 }
 
 .error-message {
-    color: red;
+    color: rgb(57, 71, 151);
     margin-top: 10px;
 }
 
-/* Courses page styles */
+/* studentPage styles */
+
 header {
     background-color: #2d0814;
     color: white;

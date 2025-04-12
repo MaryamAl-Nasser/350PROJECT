@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administrator Interface</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-header {
+      background-color: #2d0814;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .admin-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .admin-controls button {
+      background-color: #90143c;
+    }
+
+    .admin-controls button:hover {
+      background-color: #91790f;
+    }
+
+    .course-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .course-card h3 {
+      color: #90143c;
+      margin-top: 0;
+    }
+
+    .course-card ul {
+      padding-left: 20px;
+    }
+
+    .course-card li {
+      margin-bottom: 5px;
+    }
+
+    .course-card button {
+      margin-top: 5px;
+      margin-right: 5px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .admin-controls {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .admin-controls button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="admin-header">
+    <h1>Administrator Course Management</h1>
+  </header>
+
+  <nav class="admin-controls">
+    <button onclick="displayCourses()">Display Courses</button>
+    <button onclick="createNewCourse()">Create New Course</button>
+  </nav>
+
+  <main>
+    <div id="course-list"></div>
+  </main>
+
+  <script>
+    let courses = [];
+
+    async function loadData() {
+      try {
+        const response = await fetch('data/courses.json');
+        if (!response.ok) throw new Error('Failed to load courses');
+        courses = await response.json();
+        console.log("Courses loaded:", courses);
+      } catch (err) {
+        alert("Error loading courses: " + err.message);
+      }
+    }
+
+    function displayCourses() {
+      const container = document.getElementById("course-list");
+      container.innerHTML = "";
+
+      if (courses.length === 0) {
+        container.innerHTML = "<p>No courses available.</p>";
+        return;
+      }
+
+      courses.forEach((course, courseIndex) => {
+        const div = document.createElement("div");
+        div.className = "course-card";
+
+        const instructorsHTML = course.instructors.map((inst, instIndex) => `
+          <li>
+            ${inst.name} - Slots: ${inst.availableSlots} - Status: ${inst.status || "Pending"}
+            <br />
+            <button onclick="validateInstructor(${courseIndex}, ${instIndex})">Validate</button>
+            <button onclick="cancelInstructor(${courseIndex}, ${instIndex})">Cancel</button>
+          </li>
+        `).join("");
+
+        div.innerHTML = `
+          <h3>${course.name} (${course.courseCode})</h3>
+          <p><strong>Category:</strong> ${course.category}</p>
+          <p><strong>Status:</strong> ${course.status}</p>
+          <p><strong>Description:</strong> ${course.description}</p>
+          <h4>Instructors:</h4>
+          <ul>${instructorsHTML}</ul>
+          <button onclick="removeCourse(${courseIndex})" style="background-color:#dc3545;">Remove Course</button>
+        `;
+
+        container.appendChild(div);
+      });
+    }
+
+    function validateInstructor(courseIndex, instIndex) {
+      courses[courseIndex].instructors[instIndex].status = "validated";
+      alert("Instructor validated!");
+      displayCourses();
+    }
+
+    function cancelInstructor(courseIndex, instIndex) {
+      courses[courseIndex].instructors[instIndex].status = "cancelled";
+      alert("Instructor cancelled!");
+      displayCourses();
+    }
+
+    function removeCourse(index) {
+      if (confirm("Are you sure you want to remove this course?")) {
+        courses.splice(index, 1);
+        displayCourses();
+      }
+    }
+
+    function createNewCourse() {
+      const name = prompt("Enter course name:");
+      const courseNumber = prompt("Enter course number:");
+      const category = prompt("Enter course category:");
+      const courseCode = prompt("Enter course code:");
+      const credits = prompt("Enter number of credits:");
+      const courseSemester = prompt("Enter course semester (e.g., Fall):");
+      const description = prompt("Enter course description:");
+      const instructorName = prompt("Enter instructor name:");
+      const availableSlots = parseInt(prompt("Enter available slots:"));
+
+      if (
+        !name || !courseNumber || !category || !courseCode || !credits ||
+        !courseSemester || !description || !instructorName || isNaN(availableSlots)
+      ) {
+        alert("All fields must be filled correctly.");
+        return;
+      }
+
+      const newCourse = {
+        name,
+        "course number": courseNumber,
+        category,
+        courseCode,
+        credits,
+        courseSemester: [courseSemester],
+        status: "open",
+        description,
+        RequirementsCourses: [],
+        instructors: [
+          {
+            name: instructorName,
+            availableSlots: availableSlots,
+            status: ""
+          }
+        ]
+      };
+
+      courses.push(newCourse);
+      alert("New course created successfully!");
+      displayCourses();
+    }
+
+    window.onload = loadData;
+  </script>
+</body>
+</html>
