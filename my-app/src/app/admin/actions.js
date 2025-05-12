@@ -1,4 +1,3 @@
-// app/admin/actions.js
 'use server';
 
 import { getAllCourses, updateInstructorStatus as updateStatus } from '@/lib/repository';

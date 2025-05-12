@@ -1,49 +1,60 @@
-// app/statistics/course-categories/page.js
-'use client';
-
-import { useState, useEffect } from 'react';
 import styles from '../../admin.module.css';
 
-export default function CourseCategoriesPage() {
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+async function fetchCourseCategoryStats() {
   
+  const res = await fetch(`http://localhost:3000/api/course-categories`, {
+    cache: 'no-store', // disable caching
+  });
 
-  if (loading) return <div className={styles.loading}>Loading category statistics...</div>;
-  if (error) return <div className={styles.error}>{error}</div>;
+  if (!res.ok) {
+    throw new Error('Failed to fetch course category statistics');
+  }
+
+  return res.json();
+}
+
+export default async function CourseCategoryStatisticsPage() {
+  let stats = [];
+
+  try {
+    stats = await fetchCourseCategoryStats();
+  } catch (error) {
+    return (
+      <div className="p-6">
+        <h1 className="text-xl font-bold">Course Category Statistics</h1>
+        <p className="text-red-500 mt-4">Error loading data: {error.message}</p>
+      </div>
+    );
+  }
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.sectionTitle}>Course Categories</h2>
-      
-      <div className={styles.tableContainer}>
-        <table className={styles.courseTable}>
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Total Courses</th>
-            </tr>
-          </thead>
-          <tbody>
-            {categories.length === 0 ? (
-              <tr>
-                <td colSpan="2" className={styles.noData}>
-                  No course categories found
-                </td>
+    
+      <div className={styles.container}>
+      <h1 className={styles.sectionTitle}>Course Category Statistics</h1>
+      <table className={styles.courseTable}>
+        <thead >
+          <tr>
+            <th>Category</th>
+            <th >Course Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          {stats.length > 0 ? (
+            stats.map((stat, index) => (
+              <tr key={index} className={styles.tableRow}>
+                <td >{stat.category}</td>
+                <td >{stat.count}</td>
               </tr>
-            ) : (
-              categories.map((category, index) => (
-                <tr key={index} className={styles.tableRow}>
-                  <td>{category.category}</td>
-                  <td>{category._count._all}</td>
-                </tr>
-              ))
-            )}
-          </tbody>
-        </table>
-      </div>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="2" className="py-4 text-center text-gray-500">
+                No categories found.
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
   );
 }

@@ -224,7 +224,26 @@ export async function getCoursesByCategory() {
     throw new Error(`Failed to fetch courses by category: ${error.message}`);
   }
 }
+//course category statistics
+export async function getCourseCategoryStats() {
+  const stats = await prisma.course.groupBy({
+    by: ['category'],
+    _count: {
+      category: true,
+    },
+    orderBy: {
+      _count: {
+        category: 'desc',
+      },
+    },
+  });
 
+  return stats.map((item) => ({
+    category: item.category,
+    count: item._count.category,
+  }));
+}
+//username and password authentication
 export async function authenticateUser(username, password) {
   try {
     const user = await prisma.user.findUnique({
@@ -249,3 +268,4 @@ export async function authenticateUser(username, password) {
     throw error;
   }
 }
+

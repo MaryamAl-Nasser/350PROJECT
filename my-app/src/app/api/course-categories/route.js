@@ -1,15 +1,20 @@
-// app/api/statistics/course-categories/route.js
-import { NextResponse } from 'next/server';
-import { getCoursesByCategory } from '@/lib/repository';
+import { getCourseCategoryStats } from '@/lib/repository';
 
 export async function GET() {
   try {
-    const categories = await getCoursesByCategory();
-    return NextResponse.json(categories);
+    const stats = await getCourseCategoryStats();
+    return new Response(JSON.stringify(stats), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
-    return NextResponse.json(
-      { error: `Failed to fetch course categories: ${error.message}` },
-      { status: 500 }
+    console.error('Error fetching course category stats:', error);
+    return new Response(
+      JSON.stringify({ error: 'Failed to fetch course category statistics' }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      }
     );
   }
 }

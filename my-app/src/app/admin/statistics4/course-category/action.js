@@ -1,16 +1,22 @@
-// app/statistics/actions.js
-'use server';
+import { PrismaClient } from '@prisma/client';
 
-export async function getCoursesByCategoryStats() {
-  try {
-    const stats = await repositoryGetCoursesByCategory();
-    
-    return stats.map(category => ({
-      category: category.category,
-      courseCount: category._count._all
-    }));
-  } catch (error) {
-    console.error('Server action error:', error);
-    throw new Error(`Failed to load category stats: ${error.message}`);
-  }
+const prisma = new PrismaClient();
+
+export async function getCourseCategoryStats() {
+  const stats = await prisma.course.groupBy({
+    by: ['category'],
+    _count: {
+      category: true,
+    },
+    orderBy: {
+      _count: {
+        category: 'desc',
+      },
+    },
+  });
+
+  return stats.map((item) => ({
+    category: item.category,
+    count: item._count.category,
+  }));
 }
