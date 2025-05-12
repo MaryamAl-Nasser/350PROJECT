@@ -17,7 +17,7 @@ export async function updateInstructorStatus(courseId, classId, status) {
     const updatedCourse = await updateStatus(courseId, classId, status);
     return updatedCourse;
   } catch (error) {
-    console.error('Error updating instructor status:', error);
+    console.error('Error updating instructor status:', error.message);
     throw new Error('Failed to update instructor status');
   }
 }

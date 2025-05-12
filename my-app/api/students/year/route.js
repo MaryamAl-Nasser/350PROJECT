@@ -6,7 +6,6 @@ export async function GET() {
   try {
     const result = await getStudentsPerYear();
     
-    // Convert DateTime to year
     const stats = result.map(item => ({
       year: item.enrollmentDate.getFullYear(),
       count: item._count._all

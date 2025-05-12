@@ -2,14 +2,13 @@
 
 import bcrypt from 'bcryptjs';
 import { faker } from '@faker-js/faker';
-// prisma/seed.js
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
 const saltRounds = 10;
 
-// ✅ Keep your existing seeding functions
+
 async function seedStudents(count = 500) {
   const students = [];
   for (let i = 0; i < count; i++) {
@@ -84,11 +83,10 @@ async function seedEnrollments(studentCount = 500, classCount = 50) {
   return await prisma.enrollment.createMany({ data: enrollments });
 }
 
-// ✅ Add admin user seeding inside main()
 async function main() {
   console.log('Starting seeding...');
   
-  // ✅ Seed data
+
   await seedStudents();
   await seedCourses();
   await seedInstructors();
