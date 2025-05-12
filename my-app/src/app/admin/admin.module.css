@@ -1,0 +1,245 @@
+/* app/admin/admin.module.css */
+.container {
+  min-height: 100vh;
+}
+
+.adminHeader {
+  background-color: #2d0814;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.adminControls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.createButton, .refreshButton {
+  background-color: #90143c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.createButton:hover, .refreshButton:hover {
+  background-color: #91790f;
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d0814;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.courseTable {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.courseTable th, 
+.courseTable td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  min-width: 150px;
+}
+
+.courseTable th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #333;
+}
+
+.tableRow:hover {
+  background-color: #fafafa;
+}
+
+.statusCell {
+  min-width: 150px;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.statusBadge.pending {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.statusBadge.validated {
+  background-color: #28a745;
+  color: white;
+}
+
+.statusBadge.cancelled {
+  background-color: #dc3545;
+  color: white;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.validateButton, 
+.cancelButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.validateButton {
+  background-color: #28a745;
+}
+
+.validateButton:hover {
+  background-color: #218838;
+}
+
+.cancelButton {
+  background-color: #dc3545;
+}
+
+.cancelButton:hover {
+  background-color: #c82333;
+}
+
+.noData {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.error {
+  color: #dc3545;
+}
+/* app/admin/admin.module.css */
+/* Reuse existing styles from your admin.module.css */
+/* Add any instructor-specific styles here if needed */
+.instructorTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.instructorTable th, .instructorTable td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.instructorTable th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.instructorTable tr:hover {
+  background-color: #fafafa;
+}
+/* app/admin/admin.module.css */
+.studentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.studentsTable th,
+.studentsTable td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.studentsTable th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.studentsTable tr:hover {
+  background-color: #f9f9f9;
+}
+
+.noData {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+/* admin.module.css */
+.highRate {
+  color: red;
+  font-weight: bold;
+}
+
+.mediumRate {
+  color: orange;
+}
+
+.lowRate {
+  color: green;
+}
+
+.courseTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.courseTable th, .courseTable td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.courseTable th {
+  background-color: #f5f5f5;
+}
+@media screen and (max-width: 768px) {
+  .courseTable {
+    font-size: 0.9em;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .actionButtons button {
+    width: 100%;
+  }
+}

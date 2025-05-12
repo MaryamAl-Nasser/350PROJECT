@@ -1,0 +1,82 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// prisma/schema.prisma
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Student {
+  id            Int       @id @default(autoincrement())
+  name          String
+  email         String    @unique
+  enrollmentDate DateTime  @default(now())
+  enrollments   Enrollment[]
+}
+
+model Course {
+  id          Int          @id @default(autoincrement())
+  title       String
+  category    String
+  credits     Int
+  classes     Class[]
+  
+
+  prerequisites Prerequisite[] @relation("PrerequisiteCourse")
+  requiredFor   Prerequisite[] @relation("PrerequisiteRequiredFor")
+}
+
+model Instructor {
+  id         Int       @id @default(autoincrement())
+  name       String
+  department String
+  classes    Class[]
+}
+
+model Class {
+  id          Int       @id @default(autoincrement())
+  courseId    Int
+  instructorId Int
+  year        Int
+  semester    String
+  course      Course    @relation(fields: [courseId], references: [id])
+  instructor  Instructor @relation(fields: [instructorId], references: [id])
+  enrollments Enrollment[]
+}
+
+model Enrollment {
+  id        Int      @id @default(autoincrement())
+  studentId Int
+  classId   Int
+  grade     String?
+  status    String   @default("Pending")
+  student   Student  @relation(fields: [studentId], references: [id])
+  class     Class    @relation(fields: [classId], references: [id])
+}
+
+
+
+model Prerequisite {
+  id             Int      @id @default(autoincrement())
+  courseId       Int
+  prerequisiteId Int
+  course         Course   @relation("PrerequisiteCourse", fields: [courseId], references: [id])
+  prerequisite   Course   @relation("PrerequisiteRequiredFor", fields: [prerequisiteId], references: [id])
+
+  @@unique([courseId, prerequisiteId]) 
+}
+// prisma/schema.prisma
+model User {
+  id         Int      @id @default(autoincrement())
+  username   String   @unique
+  password   String
+}
+
